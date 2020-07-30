@@ -1,0 +1,122 @@
+.All div{
+    border-bottom: 1px #e7e7e7 solid;
+}
+.boxwhite{
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 600px;
+  background-color: #FFF; 
+  border: 1px #FFF solid;
+}
+.modals{
+    margin: 0 auto;
+    margin-top: 300px;
+    padding: 20px;
+    width: 600px;
+    background-color: #FFF; 
+    border: 1px #FFF solid;
+}
+.modals input{
+    width: 450px;
+    height: 30px;
+    margin-left: 50px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    font-size: 18pt;
+    border: none;
+    border-bottom: 1px #e7e7e7 solid;
+    padding: 5px;
+}
+.modals input:focus{
+    outline: none;
+}
+.modals button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 10px;
+}
+.boxwhite hr{
+    opacity: .5;
+}
+.boxwhite h5{
+margin-left: 250px;
+}
+.head{
+    margin-top: 10px;
+    display: flex;
+    margin-left: 20px;
+}
+.head img{
+    margin-top: 4px;
+}
+.head input{
+    width: 450px;
+    height: 30px;
+    margin-left: 50px;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    font-size: 18pt;
+    border: none;
+    opacity: 0.5;
+    border-bottom: 1px #e7e7e7 solid;
+}
+.head input:focus{
+    opacity: 1;
+    outline: none;
+    transition: 0.5s;
+}
+.TodoItem-complete {
+    text-decoration: line-through;
+    display: flex;
+    padding-left: 20px;
+    font-size: 18pt;
+}
+.TodoItem {
+    display: flex;
+    padding-left: 20px;
+    font-size: 18pt;
+}
+.TodoItem-complete p{
+    margin-left: 50px;
+    opacity: .5;
+}
+.TodoItem img{
+    cursor: pointer;
+    opacity: 1;
+    margin-top: 25px;
+}
+.TodoItem div:last-child{
+    margin-left: auto;
+    margin-right: 25px;
+    margin-top: 34px;
+    display: none;
+}
+
+.TodoItem-complete img{
+    cursor: pointer;
+    opacity: 1;
+    margin-top: 25px;
+}
+.TodoItem-complete div:last-child{
+    margin-left: auto;
+    margin-right: 25px;
+
+    display: inline;
+}
+.TodoItem-complete div:last-child img{
+    padding: 10px;
+}
+.TodoItem-complete:hover div:last-child{
+    display: inline;
+}
+/* .TodoItem-complete:hover{
+    background-color: #e7e7e7;
+    opacity: 1;
+} */
+.TodoItem p{
+    margin-left: 50px;
+}
+/* .TodoItem p:hover{
+    background-color: #e7e7e7;
+} */
