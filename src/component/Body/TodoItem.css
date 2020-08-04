@@ -3,23 +3,25 @@
 }
 .boxwhite{
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 100px;
   width: 600px;
+  height: 500px;
   background-color: #FFF; 
   border: 1px #FFF solid;
+  overflow: auto;
 }
 .modals{
     margin: 0 auto;
     margin-top: 300px;
     padding: 20px;
-    width: 600px;
+    width: 700px;
     background-color: #FFF; 
-    border: 1px #FFF solid;
+    border: 1px #e7e7e7 solid;
 }
 .modals input{
     width: 450px;
     height: 30px;
-    margin-left: 50px;
+    margin-left: 100px;
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
     font-size: 18pt;
@@ -40,7 +42,9 @@
     opacity: .5;
 }
 .boxwhite h5{
-margin-left: 250px;
+    margin-left: 210px;
+    margin-top: 200px;
+    font-size: 24pt;
 }
 .head{
     margin-top: 10px;
@@ -78,34 +82,38 @@ margin-left: 250px;
     font-size: 18pt;
 }
 .TodoItem-complete p{
+    margin-top: 25px;
     margin-left: 50px;
+    padding-bottom: 10px;
     opacity: .5;
 }
 .TodoItem img{
     cursor: pointer;
     opacity: 1;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 .TodoItem div:last-child{
     margin-left: auto;
     margin-right: 25px;
-    margin-top: 34px;
+    margin-top: 36px;
     display: none;
 }
 
 .TodoItem-complete img{
     cursor: pointer;
     opacity: 1;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 .TodoItem-complete div:last-child{
     margin-left: auto;
     margin-right: 25px;
-
     display: inline;
 }
 .TodoItem-complete div:last-child img{
-    padding: 10px;
+    padding-left: 5px;
+}
+.TodoItem-complete div:last-child img:first-child{
+    margin-right: 10px;
 }
 .TodoItem-complete:hover div:last-child{
     display: inline;
@@ -116,7 +124,10 @@ margin-left: 250px;
 } */
 .TodoItem p{
     margin-left: 50px;
+    margin-top: 25px;
+    padding-bottom: 10px;
 }
 /* .TodoItem p:hover{
     background-color: #e7e7e7;
 } */
+
