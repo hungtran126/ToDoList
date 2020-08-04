@@ -7,19 +7,9 @@ class EditTask extends Component {
         super(props)
         this.state = {
             newItems: '',
-            TodoItems: [
-                { id: 1, title: 'I do first', isComplete: false, showEditForm: false},
-                { id: 2, title: 'huhu', isComplete: false, showEditForm: false},
-                { id: 3, title: 'Hehe', isComplete: false, showEditForm: false}
-            ]
+            TodoItems: []
         }
     }
-
-    // changedName = (e) => {
-    //     this.setState({
-    //         editItem: { id: this.props.editItem.id, name: e.target.value }
-    //     })
-    // }
     render() {
         const {TodoItems} = this.state
         return (
