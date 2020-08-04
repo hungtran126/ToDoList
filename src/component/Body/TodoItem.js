@@ -24,12 +24,12 @@ class TodoItem extends Component {
         return (
             <div className="All">
                 <div className={className}>
-                    <img onClick={onClick} src={urlcheck} width={32} height={32} />
+                    <img onClick={onClick} src={urlcheck} width={32} height={32} alt="1" />
                     <p>{this.props.item.title}</p>
                     {children}
                     <div>
-                        <img onClick={onEdit}  src={edit} width={16} height={16}/>
-                        <img onClick={() => this.deLete(item.id)} src={deL} width={16} height={16} />
+                        <img onClick={onEdit}  src={edit} width={32} height={32} alt="2" />
+                        <img onClick={() => this.deLete(item.id)} src={deL} width={32} height={32} alt="3" />
                     </div>         
                 </div>
             </div>
