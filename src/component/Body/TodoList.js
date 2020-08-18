@@ -16,7 +16,6 @@ class TodoList extends Component {
         }
         this.createItems = this.createItems.bind(this)
         this.onChange = this.onChange.bind(this)
-        this.checkAl = this.checkAl.bind(this)
     }
     handleInputChange = (event) => {
         const target = event.target
@@ -25,7 +24,6 @@ class TodoList extends Component {
         this.setState({
           [name]: value
         })
-        console.log(target)
     }
     handleEditSubmit = (event) => {
         event.preventDefault()
@@ -42,7 +40,6 @@ class TodoList extends Component {
             modalIsOpen: false
         
         }))
-        console.log(key)
     }
     onItemClicked(item) {
         return () => {
@@ -52,19 +49,8 @@ class TodoList extends Component {
           this.setState({
             TodoItems: [...TodoItems.slice(0, index),{...item, isComplete: !isComplete}, ...TodoItems.slice(index + 1)]
           })
-          console.log(index)
         }
         
-    }
-    checkAl(event){
-        let TodoItems = this.state.TodoItems
-        TodoItems.forEach(TodoItem => {
-            if(TodoItem.value === event.target.value){
-            TodoItem.isComplete = event.target.checked
-            }
-        })
-        console.log(event.target.value)
-        this.setState({isComplete: TodoItems})
     }
     createItems(event) {
         if(event.keyCode === 13){
@@ -97,14 +83,11 @@ class TodoList extends Component {
         const { TodoItems } = this.state
         const index = TodoItems.findIndex(item=>item.id===id)
         if(index !== -1){
-        let TodoItem = TodoItems.splice(index, 1)
-        this.setState({title: TodoItem})
+            let TodoItem = TodoItems.splice(index, 1)
+            this.setState({title: TodoItem})
         }
-        
-        // this.setState({title: TodoItems})
-        console.log(index)
     }
-    componentWillMount() {
+    componentDidMount() {
         Modal.setAppElement('body')
     }
     openModal = (item) => {
@@ -125,7 +108,6 @@ class TodoList extends Component {
         return (
             <div className="boxwhite">
                 <div className="head">
-                    {/* <img onClick={this.checkAl} src={checkAll} width={32} height={32} alt="img" /> */}
                     <input type="text" placeholder="Add a new item" value={newItems} onChange={this.onChange} onKeyUp={this.createItems} />
                 </div>
                 {TodoItems.length > 0 && TodoItems.map((item) => <TodoItem key={item.id}
@@ -133,7 +115,6 @@ class TodoList extends Component {
                                                                             onClick={this.onItemClicked(item)} 
                                                                             deLete={this.deleteTask} 
                                                                             onEdit={() => this.openModal(item)} 
-                                                                            tid={item.id}
                 />)}
                 {TodoItems.length === 0 && <h5>Nothing here</h5>}
                 <Modal className="modals"
